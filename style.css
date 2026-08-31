@@ -2068,14 +2068,70 @@ img { max-width: 100%; display: block; }
   /* Footer */
   .footer-heading { font-size: 12px; }
   .footer-links a, .footer-links span { font-size: 13px; }
-  .social-links { gap: 8px; }
-  .social-link { width: 32px; height: 32px; font-size: 11px; }
+  .social-links { gap: 10px; }
+  .social-link { width: 36px; height: 36px; font-size: 12px; }
 
   /* Buttons */
-  .btn-lg { padding: 14px 28px; font-size: 14px; }
+  .btn-lg { padding: 14px 28px; font-size: 14px; width: 100%; justify-content: center; }
 
   /* Mobile nav */
-  .mobile-link { font-size: 24px; }
+  .mobile-link { font-size: 24px; padding: 6px 0; }
+
+  /* Service Checkboxes 1-column layout for small mobile */
+  .service-checkboxes {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .service-check {
+    padding: 16px !important;
+    min-height: 52px;
+    font-size: 15px !important;
+  }
+
+  .budget-options {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .budget-btn {
+    padding: 14px 10px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* ─── Mobile Form & Action Enhancements (≤ 768px) ───────────────────────── */
+@media (max-width: 768px) {
+  .step-heading { font-size: 20px; }
+  .step-label { font-size: 11px; }
+
+  .form-panel input,
+  .form-panel select,
+  .form-panel textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+    padding: 14px 16px !important;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .float-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .float-btn:active {
+    transform: scale(0.92);
+  }
 }
 
 /* ─── Touch: disable tilt & cursor effects ───────────────────────────────── */
