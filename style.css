@@ -1878,12 +1878,17 @@ img { max-width: 100%; display: block; }
 
   /* ── Container & spacing ── */
   .container { padding: 0 20px; }
-  .nav-container { padding: 14px 20px; }
-
   /* ── Navbar ── */
   .nav-links { display: none; }
   .nav-actions { display: none; }
   .hamburger { display: flex; margin-left: auto; }
+  .nav-container { padding: 10px 16px; gap: 12px; }
+  .nav-logo .logo-text {
+    font-size: 14px;
+    padding: 5px 12px;
+    letter-spacing: 0.08em;
+    border-radius: 6px;
+  }
 
   /* ── Hero ── */
   .hero { min-height: 100svh; }
@@ -2029,7 +2034,12 @@ img { max-width: 100%; display: block; }
   :root { --section-gap: 52px; }
 
   .container { padding: 0 16px; }
-  .nav-container { padding: 12px 16px; }
+  .nav-container { padding: 8px 14px; }
+  .nav-logo .logo-text {
+    font-size: 13px;
+    padding: 4px 10px;
+    letter-spacing: 0.06em;
+  }
 
   /* Hero */
   .hero-headline { font-size: clamp(34px, 12vw, 48px); }
