@@ -1642,13 +1642,18 @@ img { max-width: 100%; display: block; }
     z-index: 900;
   }
 
-  .float-btn {
-    flex: none;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    padding: 0;
-    gap: 0;
+  .float-btn,
+  .float-btn:hover,
+  .float-btn:focus,
+  .float-btn:active {
+    flex: none !important;
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    gap: 0 !important;
     box-shadow: 0 8px 24px rgba(0,0,0,0.35);
     display: flex;
     align-items: center;
@@ -1656,18 +1661,22 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
   }
 
-  .float-btn span {
-    display: none;
+  .float-btn:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
   }
 
-  .float-btn:hover {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    padding: 0;
-    gap: 0;
-    transform: scale(1.06);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  .float-btn:active {
+    transform: scale(0.92) !important;
+  }
+
+  .float-btn span,
+  .float-btn:hover span,
+  .float-btn:focus span,
+  .float-btn:active span {
+    display: none !important;
+    width: 0 !important;
+    opacity: 0 !important;
   }
 
   body {
