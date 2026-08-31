@@ -211,7 +211,7 @@ const CounterAnimation = (() => {
 })();
 
 
-// ─── Scroll Reveal ─────────────────────────────────────────────────────────
+// ─── Scroll Reveal (Instant Load) ──────────────────────────────────────────
 const ScrollReveal = (() => {
   function init() {
     const targets = [
@@ -225,18 +225,9 @@ const ScrollReveal = (() => {
       document.querySelector('.why-us-right'),
     ].filter(Boolean);
 
-    targets.forEach(el => el.classList.add('reveal'));
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
-
-    targets.forEach(el => observer.observe(el));
+    targets.forEach(el => {
+      el.classList.add('visible');
+    });
   }
 
   return { init };
