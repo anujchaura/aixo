@@ -250,6 +250,10 @@ img { max-width: 100%; display: block; }
   transform: translateY(-1px);
 }
 
+.mobile-header-subtitle {
+  display: none;
+}
+
 .logo-dot {
   width: 6px;
   height: 6px;
@@ -1883,12 +1887,23 @@ img { max-width: 100%; display: block; }
   .nav-links { display: none; }
   .nav-actions { display: none; }
   .hamburger { display: flex; margin-left: auto; }
-  .nav-container { padding: 10px 16px; gap: 12px; }
   .nav-logo .logo-text {
     font-size: 14px;
     padding: 5px 12px;
     letter-spacing: 0.08em;
     border-radius: 6px;
+  }
+  .mobile-header-subtitle {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: auto;
   }
 
   /* ── Hero ── */
